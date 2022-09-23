@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          안녕 worldS!!
+          안녕 wo123123S!!
         </a>
       </header>
     </div>
