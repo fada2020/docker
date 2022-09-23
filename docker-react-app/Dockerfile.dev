@@ -1,0 +1,16 @@
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+CMD ["npm", "run", "start"]
+# dockerfile을 찾을 수 없어서 -f라는 옵션을 주고 도커파일의 이름을 명시한다.
+# docker build -f Dockerfile.dev .
+# docker run -d -p 3000:3000 fada2020/react-app:latest
+# docker run -d -p 3000:3000 -v /usr/src/app/node_modules -v %cd%:/usr/src/app fada2020/react-app:latest
+# docker run -it -p 3000:3000 -v /usr/src/app/node_modules -v %cd%:/usr/src/app fada2020/react-app:latest
