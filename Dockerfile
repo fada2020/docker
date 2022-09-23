@@ -22,4 +22,4 @@ FROM nginx
 # 빌터 스테이지에서 생성된 파일들은 빌드에 들어가게 되며 그곳에 저장된 파일들을 html 밑으로 복사를 해서 nginx가 웹 브라우저의 http 요청이 올때마다
 # 알맞는 파일을 전해 줄 수 있다.
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
-# https://app.travis-ci.com/ 가입
+# https://app.travis-ci.com/ 가입  
